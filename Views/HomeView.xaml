@@ -6,162 +6,226 @@
              xmlns:local="clr-namespace:MVVM.Views" xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
              mc:Ignorable="d" 
              Height="500" Width="1000">
-    
-    <StackPanel>
-        <TextBlock Text="Discover"
-                   Foreground="{StaticResource titleColor2}"
-                   FontSize="20"
-                   FontFamily="Montserrat"
-                   FontWeight="Medium"
-                   VerticalAlignment="Center"
-                   Margin="10,0,0,30"/>
 
-        <StackPanel Orientation="Horizontal">
-            <Border Width="370"
-                    Height="200"
-                    Margin="30,0,100,20"
-                    CornerRadius="10">
+    <ScrollViewer Grid.Row="1">
+        <StackPanel>
 
-                <Border.Background>
-                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
-                        <GradientStop Color="#5bc3ff" Offset="0.0"/>
-                        <GradientStop Color="#3aa0ff" Offset="1"/>
-                    </LinearGradientBrush>
-                </Border.Background>
+            <StackPanel Orientation="Horizontal">
 
-                <Border.Clip>
-                    <RectangleGeometry RadiusX="10"
-                                       RadiusY="10"
-                                       Rect="0,0,400,200"/>
-                </Border.Clip>
-
-                <Grid>
-                    <StackPanel>
-                        <TextBlock Text="Stock"
-                                   Foreground="White"
-                                   FontSize="28"
-                                   Margin="20,10,10,0"/>
-
-                        <Button Style="{StaticResource moreButton}"
-                                Tag="{StaticResource color1}"
-                                Margin="300,100,0,0">
-                            <fa:IconImage Icon="AngleRight"
-                                          Height="30" Width="30"
-                                          Style="{StaticResource iconButtonIcon}"/>
-                        </Button>
+                <RadioButton Style="{StaticResource marketButton}"
+                             Margin="10">
+                    <StackPanel Orientation="Horizontal"
+                                Margin="15">
+                        <TextBlock Text="All" Style="{StaticResource marketButtonText}"/>
                     </StackPanel>
-                </Grid>
+                </RadioButton>
 
-            </Border>
-
-            <Border Width="370"
-                    Height="200"
-                    Margin="30,0,100,20"
-                    CornerRadius="10">
-                
-                <Border.Background>
-                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
-                        <GradientStop Color="#2ba0af" Offset="0.0"/>
-                        <GradientStop Color="#9ab0ff" Offset="1"/>
-                    </LinearGradientBrush>
-                </Border.Background>
-
-                <Border.Clip>
-                    <RectangleGeometry RadiusX="10"
-                                       RadiusY="10"
-                                       Rect="0,0,400,200"/>
-                </Border.Clip>
-
-                <Grid>
-                    <StackPanel>
-                        <TextBlock Text="Crypto"
-                                   Foreground="White"
-                                   FontSize="28"
-                                   Margin="20,10,10,0"/>
-
-                        <Button Style="{StaticResource moreButton}"
-                                Tag="{StaticResource color1}"
-                                Margin="300,100,0,0">
-                            <fa:IconImage Icon="AngleRight"
-                                          Height="30" Width="30"
-                                          Style="{StaticResource iconButtonIcon}"/>
-                        </Button>
+                <RadioButton Style="{StaticResource marketButton}"
+                             Margin="10">
+                    <StackPanel Orientation="Horizontal"
+                                Margin="15">
+                        <TextBlock Text="Stocks" Style="{StaticResource marketButtonText}"/>
                     </StackPanel>
-                </Grid>
-            </Border>
+                </RadioButton>
+
+                <RadioButton Style="{StaticResource marketButton}"
+                             IsChecked="True"
+                             Margin="10">
+                    <StackPanel Orientation="Horizontal"
+                                Margin="15">
+                        <TextBlock Text="Crypto" Style="{StaticResource marketButtonText}"/>
+                    </StackPanel>
+                </RadioButton>
+
+                <RadioButton Style="{StaticResource marketButton}"
+                             Margin="10">
+                    <StackPanel Orientation="Horizontal"
+                                Margin="15">
+                        <TextBlock Text="Forex" Style="{StaticResource marketButtonText}"/>
+                    </StackPanel>
+                </RadioButton>
+
+                <RadioButton Style="{StaticResource marketButton}"
+                             Margin="10">
+                    <StackPanel Orientation="Horizontal"
+                                Margin="15">
+                        <TextBlock Text="Indices" Style="{StaticResource marketButtonText}"/>
+                    </StackPanel>
+                </RadioButton>
+
+                <RadioButton Style="{StaticResource marketButton}"
+                             Margin="10">
+                    <StackPanel Orientation="Horizontal"
+                                Margin="15">
+                        <TextBlock Text="Future" Style="{StaticResource marketButtonText}"/>
+                    </StackPanel>
+                </RadioButton>
+
+                <RadioButton Style="{StaticResource marketButton}"
+                             Margin="10">
+                    <StackPanel Orientation="Horizontal"
+                                Margin="15">
+                        <TextBlock Text="Bonds" Style="{StaticResource marketButtonText}"/>
+                    </StackPanel>
+                </RadioButton>
+            </StackPanel>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="200"/>
+
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Column="0"
+                            Grid.Row="0"
+                            Orientation="Horizontal"
+                            Height="35"
+                            Margin="15,25,0,40">
+
+                    <Image Source="/Images/Logo-1.png" Height="30"/>
+                    <TextBlock Text="TSLA"
+                               Foreground="{StaticResource titleColor2}"
+                               FontSize="20"
+                               FontFamily="Montserrat"
+                               FontWeight="Medium"
+                               VerticalAlignment="Center"
+                               Margin="10,0,0,0"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1"
+                            Grid.Row="0"
+                            Orientation="Horizontal"
+                            Height="35"
+                            Margin="15,25,0,40">
+
+                    <TextBlock Text="TESLA, INC."
+                               Foreground="{StaticResource titleColor2}"
+                               FontSize="20"
+                               FontFamily="Montserrat"
+                               FontWeight="Medium"
+                               VerticalAlignment="Center"
+                               Margin="10,0,0,0"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="2"
+                            Grid.Row="0"
+                            Orientation="Horizontal"
+                            Height="35"
+                            Margin="15,25,0,40">
+
+                    <TextBlock Text="Crypto"
+                               Foreground="{StaticResource titleColor2}"
+                               FontSize="20"
+                               FontFamily="Montserrat"
+                               FontWeight="Medium"
+                               VerticalAlignment="Center"
+                               Margin="10,0,0,0"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="0"
+                            Grid.Row="1"
+                            Orientation="Horizontal"
+                            Height="35"
+                            Margin="15,25,0,40">
+
+                    <Image Source="/Images/Logo-2.png" Height="30" Width="36"/>
+                    <TextBlock Text="AAPL"
+                               Foreground="{StaticResource titleColor2}"
+                               FontSize="20"
+                               FontFamily="Montserrat"
+                               FontWeight="Medium"
+                               VerticalAlignment="Center"
+                               Margin="10,0,0,0"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1"
+                            Grid.Row="1"
+                            Orientation="Horizontal"
+                            Height="35"
+                            Margin="15,25,0,40">
+
+                    <TextBlock Text="APPLE, INC."
+                               Foreground="{StaticResource titleColor2}"
+                               FontSize="20"
+                               FontFamily="Montserrat"
+                               FontWeight="Medium"
+                               VerticalAlignment="Center"
+                               Margin="10,0,0,0"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="2"
+                            Grid.Row="1"
+                            Orientation="Horizontal"
+                            Height="35"
+                            Margin="15,25,0,40">
+
+                    <TextBlock Text="Crypto"
+                               Foreground="{StaticResource titleColor2}"
+                               FontSize="20"
+                               FontFamily="Montserrat"
+                               FontWeight="Medium"
+                               VerticalAlignment="Center"
+                               Margin="10,0,0,0"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="0"
+                            Grid.Row="2"
+                            Orientation="Horizontal"
+                            Height="35"
+                            Margin="15,25,0,40">
+
+                    <Image Source="/Images/Logo-3.png" Height="30"/>
+                    <TextBlock Text="NVDA"
+                               Foreground="{StaticResource titleColor2}"
+                               FontSize="20"
+                               FontFamily="Montserrat"
+                               FontWeight="Medium"
+                               VerticalAlignment="Center"
+                               Margin="10,0,0,0"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1"
+                            Grid.Row="2"
+                            Orientation="Horizontal"
+                            Height="35"
+                            Margin="15,25,0,40">
+
+                    <TextBlock Text="NVIDIA, INC."
+                               Foreground="{StaticResource titleColor2}"
+                               FontSize="20"
+                               FontFamily="Montserrat"
+                               FontWeight="Medium"
+                               VerticalAlignment="Center"
+                               Margin="10,0,0,0"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="2"
+                            Grid.Row="2"
+                            Orientation="Horizontal"
+                            Height="35"
+                            Margin="15,25,0,40">
+
+                    <TextBlock Text="Crypto"
+                               Foreground="{StaticResource titleColor2}"
+                               FontSize="20"
+                               FontFamily="Montserrat"
+                               FontWeight="Medium"
+                               VerticalAlignment="Center"
+                               Margin="10,0,0,0"/>
+                </StackPanel>
+            </Grid>
         </StackPanel>
-
-        <StackPanel Orientation="Horizontal">
-            <Border Width="370"
-                    Height="200"
-                    Margin="30,0,100,20"
-                    CornerRadius="10">
-                <Border.Background>
-                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
-                        <GradientStop Color="#FFAFE0A2" Offset="0.0"/>
-                        <GradientStop Color="#FF0C7B27" Offset="1"/>
-                    </LinearGradientBrush>
-                </Border.Background>
-
-                <Border.Clip>
-                    <RectangleGeometry RadiusX="10"
-                                       RadiusY="10"
-                                       Rect="0,0,400,200"/>
-                </Border.Clip>
-
-                <Grid>
-                    <StackPanel>
-                        <TextBlock Text="Forex"
-                                   Foreground="White"
-                                   FontSize="28"
-                                   Margin="20,10,10,0"/>
-                    </StackPanel>
-
-                    <Button Style="{StaticResource moreButton}"
-                            Tag="{StaticResource color1}"
-                            Margin="300,100,0,0">
-                        <fa:IconImage Icon="AngleRight"
-                                      Height="30" Width="30"
-                                      Style="{StaticResource iconButtonIcon}"/>
-                    </Button>
-                </Grid>
-            </Border>
-
-            <Border Width="370"
-                    Height="200"
-                    Margin="30,0,100,20"
-                    CornerRadius="10">
-                <Border.Background>
-                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
-                        <GradientStop Color="#FFDE8469" Offset="0.0"/>
-                        <GradientStop Color="#FFE4B945" Offset="1"/>
-                    </LinearGradientBrush>
-                </Border.Background>
-
-                <Border.Clip>
-                    <RectangleGeometry RadiusX="10"
-                                       RadiusY="10"
-                                       Rect="0,0,400,200"/>
-                </Border.Clip>
-
-                <Grid>
-                    <StackPanel>
-                        <TextBlock Text="Indices"
-                                   Foreground="White"
-                                   FontSize="28"
-                                   Margin="20,10,10,0"/>
-                    </StackPanel>
-
-                    <Button Style="{StaticResource moreButton}"
-                            Tag="{StaticResource color1}"
-                            Margin="300,100,0,0">
-                        <fa:IconImage Icon="AngleRight"
-                                      Height="30" Width="30"
-                                      Style="{StaticResource iconButtonIcon}"/>
-                    </Button>
-                </Grid>
-            </Border>
-        </StackPanel>
-
-    </StackPanel>
+    </ScrollViewer>
 </UserControl>
