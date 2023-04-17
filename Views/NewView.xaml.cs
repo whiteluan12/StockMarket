@@ -1,5 +1,4 @@
-﻿using MVVM.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,13 +15,14 @@ using System.Windows.Shapes;
 
 namespace MVVM.Views
 {
-    public partial class CustomerView : UserControl
+    /// <summary>
+    /// Interaction logic for NewView.xaml
+    /// </summary>
+    public partial class NewView : UserControl
     {
-        public CustomerView()
+        public NewView()
         {
             InitializeComponent();
-
         }
-
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MVVM.ViewModels
 {
-    public class HomeViewModel : ViewModelBase
+    public class NewViewModel : ViewModelBase
     {
         private ViewModelBase _currentChildView;
         public ViewModelBase CurrentChildView
@@ -21,6 +21,4 @@ namespace MVVM.ViewModels
                 OnPropertyChanged(nameof(CurrentChildView));
             }
         }
-
-    }
 }

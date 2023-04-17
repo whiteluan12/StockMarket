@@ -75,6 +75,8 @@ namespace MVVM.ViewModels
         public ICommand ShowCustomerViewCommand { get; }
         public ICommand ShowSettingViewComand { get; }
 
+        public ICommand ShowNewViewCommand { get; }
+
         public MainViewModel()
         {
             userRepository = new UserRepository();
@@ -83,6 +85,7 @@ namespace MVVM.ViewModels
             ShowHomeViewCommand = new ViewModelCommand(ExecuteShowHomeViewCommand);
             ShowCustomerViewCommand = new ViewModelCommand(ExecuteShowCustomerViewCommand);
             ShowSettingViewComand = new ViewModelCommand(ExecuteShowSettingViewCommand);
+            ShowNewViewCommand = new ViewModelCommand(ExecuteShowNewViewCommand);
 
             ExecuteShowHomeViewCommand(null);
 
@@ -108,6 +111,13 @@ namespace MVVM.ViewModels
             CurrentChildView = new SettingViewModel();
             Caption = "Setting";
             Icon = IconChar.Gear;
+        }
+
+        private void ExecuteShowNewViewCommand(object obj)
+        {
+            CurrentChildView = new NewViewModel();
+            Caption = "New";
+            Icon = IconChar.Newspaper;
         }
 
         private void LoadCurrentUserData()

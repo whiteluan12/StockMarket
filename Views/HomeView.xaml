@@ -5,71 +5,72 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MVVM.Views" xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
              mc:Ignorable="d" 
-             Height="500" Width="1000">
+             Height="600" Width="1000">
 
-    <ScrollViewer Grid.Row="1">
-        <StackPanel>
 
-            <StackPanel Orientation="Horizontal">
+    <StackPanel>
+        
+        <StackPanel Orientation="Horizontal">
 
-                <RadioButton Style="{StaticResource marketButton}"
-                             Margin="10">
-                    <StackPanel Orientation="Horizontal"
-                                Margin="15">
-                        <TextBlock Text="All" Style="{StaticResource marketButtonText}"/>
-                    </StackPanel>
-                </RadioButton>
+            <RadioButton Style="{StaticResource marketButton}"
+                            Margin="10">
+                <StackPanel Orientation="Horizontal"
+                            Margin="15">
+                    <TextBlock Text="All" Style="{StaticResource marketButtonText}"/>
+                </StackPanel>
+            </RadioButton>
 
-                <RadioButton Style="{StaticResource marketButton}"
-                             Margin="10">
-                    <StackPanel Orientation="Horizontal"
-                                Margin="15">
-                        <TextBlock Text="Stocks" Style="{StaticResource marketButtonText}"/>
-                    </StackPanel>
-                </RadioButton>
+            <RadioButton Style="{StaticResource marketButton}"
+                            Margin="10">
+                <StackPanel Orientation="Horizontal"
+                            Margin="15">
+                    <TextBlock Text="Stocks" Style="{StaticResource marketButtonText}"/>
+                </StackPanel>
+            </RadioButton>
 
-                <RadioButton Style="{StaticResource marketButton}"
-                             IsChecked="True"
-                             Margin="10">
-                    <StackPanel Orientation="Horizontal"
-                                Margin="15">
-                        <TextBlock Text="Crypto" Style="{StaticResource marketButtonText}"/>
-                    </StackPanel>
-                </RadioButton>
+            <RadioButton Style="{StaticResource marketButton}"
+                            IsChecked="True"
+                            Margin="10">
+                <StackPanel Orientation="Horizontal"
+                            Margin="15">
+                    <TextBlock Text="Crypto" Style="{StaticResource marketButtonText}"/>
+                </StackPanel>
+            </RadioButton>
 
-                <RadioButton Style="{StaticResource marketButton}"
-                             Margin="10">
-                    <StackPanel Orientation="Horizontal"
-                                Margin="15">
-                        <TextBlock Text="Forex" Style="{StaticResource marketButtonText}"/>
-                    </StackPanel>
-                </RadioButton>
+            <RadioButton Style="{StaticResource marketButton}"
+                            Margin="10">
+                <StackPanel Orientation="Horizontal"
+                            Margin="15">
+                    <TextBlock Text="Forex" Style="{StaticResource marketButtonText}"/>
+                </StackPanel>
+            </RadioButton>
 
-                <RadioButton Style="{StaticResource marketButton}"
-                             Margin="10">
-                    <StackPanel Orientation="Horizontal"
-                                Margin="15">
-                        <TextBlock Text="Indices" Style="{StaticResource marketButtonText}"/>
-                    </StackPanel>
-                </RadioButton>
+            <RadioButton Style="{StaticResource marketButton}"
+                            Margin="10">
+                <StackPanel Orientation="Horizontal"
+                            Margin="15">
+                    <TextBlock Text="Indices" Style="{StaticResource marketButtonText}"/>
+                </StackPanel>
+            </RadioButton>
 
-                <RadioButton Style="{StaticResource marketButton}"
-                             Margin="10">
-                    <StackPanel Orientation="Horizontal"
-                                Margin="15">
-                        <TextBlock Text="Future" Style="{StaticResource marketButtonText}"/>
-                    </StackPanel>
-                </RadioButton>
+            <RadioButton Style="{StaticResource marketButton}"
+                            Margin="10">
+                <StackPanel Orientation="Horizontal"
+                            Margin="15">
+                    <TextBlock Text="Future" Style="{StaticResource marketButtonText}"/>
+                </StackPanel>
+            </RadioButton>
 
-                <RadioButton Style="{StaticResource marketButton}"
-                             Margin="10">
-                    <StackPanel Orientation="Horizontal"
-                                Margin="15">
-                        <TextBlock Text="Bonds" Style="{StaticResource marketButtonText}"/>
-                    </StackPanel>
-                </RadioButton>
-            </StackPanel>
-
+            <RadioButton Style="{StaticResource marketButton}"
+                            Margin="10">
+                <StackPanel Orientation="Horizontal"
+                            Margin="15">
+                    <TextBlock Text="Bonds" Style="{StaticResource marketButtonText}"/>
+                </StackPanel>
+            </RadioButton>
+        </StackPanel>
+        
+        <ScrollViewer Grid.Row="1">
             <Grid>
                 <Grid.ColumnDefinitions>
 
@@ -81,10 +82,10 @@
 
                 <Grid.RowDefinitions>
 
-                    <RowDefinition Height="100"/>
-                    <RowDefinition Height="100"/>
-                    <RowDefinition Height="100"/>
-                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="125"/>
+                    <RowDefinition Height="125"/>
+                    <RowDefinition Height="125"/>
+                    <RowDefinition Height="125"/>
 
                 </Grid.RowDefinitions>
 
@@ -226,6 +227,7 @@
                                Margin="10,0,0,0"/>
                 </StackPanel>
             </Grid>
-        </StackPanel>
-    </ScrollViewer>
+        </ScrollViewer>
+    </StackPanel>
+    
 </UserControl>
